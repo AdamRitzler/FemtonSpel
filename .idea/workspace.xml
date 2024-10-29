@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c91abf8d-b066-4620-8fb5-ad253f420dd6" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
+    <list default="true" id="c91abf8d-b066-4620-8fb5-ad253f420dd6" name="Changes" comment="liten start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +96,8 @@
       <workItem from="1730203224980" duration="20000" />
       <workItem from="1730203267444" duration="172000" />
       <workItem from="1730203473695" duration="123000" />
+      <workItem from="1730203629683" duration="3028000" />
+      <workItem from="1730208878634" duration="58000" />
     </task>
     <task id="LOCAL−00001" summary="first">
       <option name="closed" value="true" />
@@ -105,7 +106,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1730196127058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="liten start">
+      <option name="closed" value="true" />
+      <created>1730203834822</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1730203834822</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="liten start" />
+    <option name="LAST_COMMIT_MESSAGE" value="liten start" />
   </component>
 </project>
