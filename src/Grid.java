@@ -5,7 +5,9 @@ import java.util.Collections;
 
 
 public class Grid extends JFrame {
+    JPanel panel = new JPanel();
     JPanel panel1 = new JPanel();
+    JPanel panel2 = new JPanel();
     ArrayList<JButton> buttonsLista = new ArrayList<>();
 
     JButton button1 = new JButton("1");
@@ -23,6 +25,7 @@ public class Grid extends JFrame {
     JButton button13 = new JButton("13");
     JButton button14 = new JButton("14");
     JButton button15 = new JButton("15");
+    JButton newGame = new JButton("New Game");
 
     public void addButtons() {
         buttonsLista.add(button1);
@@ -53,18 +56,26 @@ public class Grid extends JFrame {
     }
 
     public void femtonSpelPanel() {
+        panel.setLayout(new BorderLayout());
         panel1.setLayout(new GridLayout(4, 4));
+        panel2.setLayout(new FlowLayout());
+        panel2.setPreferredSize(new Dimension(100,50));
         this.setTitle("FemtonSpel");
-        pack();
-        setVisible(true);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 500);
-        add(panel1);
 
+        add(panel);
+        panel.add(panel1, BorderLayout.CENTER);
+        panel.add(panel2, BorderLayout.SOUTH);
+
+        panel2.add(newGame);
         addButtons();
         buttonsPlacement();
 
+        setVisible(true);
         this.setLocationRelativeTo(null);
 
     }
+
 }
