@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
+
 
 public class Grid extends JFrame {
     JPanel panel1 = new JPanel();
@@ -41,21 +41,29 @@ public class Grid extends JFrame {
         buttonsLista.add(button14);
         buttonsLista.add(button15);
     }
-    public void buttonsPlacement(){
+
+    public void buttonsPlacement() {
+        //randomizar arraylistan. Forloop som går igenom listan och lägger till knapparna i panelen.
         Collections.shuffle(buttonsLista);
+        for (JButton button : buttonsLista) {
+            panel1.add(button);
+
+        }
+
     }
 
-    public void HJK() {
-        addButtons();
+    public void femtonSpelPanel() {
         panel1.setLayout(new GridLayout(4, 4));
-        this.setTitle("Swing Demo");
+        this.setTitle("FemtonSpel");
         pack();
         setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500,500);
+        this.setSize(500, 500);
+        add(panel1);
 
-        //fixa get buttons. Det här fungerar inte än
-        panel1.add(buttonsLista.get(2));
+        addButtons();
+        buttonsPlacement();
+
         this.setLocationRelativeTo(null);
 
     }
