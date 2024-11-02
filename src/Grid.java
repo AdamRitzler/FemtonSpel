@@ -63,7 +63,7 @@ public class Grid extends JFrame implements ActionListener {
     }
 
     public void cheatButtonsPlacement() {
-        buttonsLista.removeAll(buttonsLista);
+        buttonsLista.clear();
         panel1.removeAll();
         addButtons();
 
