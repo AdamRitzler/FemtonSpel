@@ -39,7 +39,7 @@ public class Grid extends JFrame implements ActionListener {
     }
 
 
-   public void addButtons() {
+    public void addButtons() {
         buttonsLista.add(button1);
         buttonsLista.add(button2);
         buttonsLista.add(button3);
@@ -55,13 +55,25 @@ public class Grid extends JFrame implements ActionListener {
         buttonsLista.add(button13);
         buttonsLista.add(button14);
         buttonsLista.add(button15);
-        //buttonsLista.add(emptyButton);
 
         emptyButton.setVisible(false);
 
-       emptyIndex = 15;
+
     }
 
+    public void cheatButtonsPlacement() {
+
+        buttonsLista.add(emptyButton);
+        Collections.swap(buttonsLista, 15, 14);
+        for (int i = 0; i < buttonsLista.size(); i++) {
+            panel1.add(buttonsLista.get(i));
+            if (buttonsLista.get(i) == emptyButton) {
+                emptyIndex = i;
+            }
+        }
+
+        emptyButton.setVisible(false);
+    }
 
     public void buttonsPlacement() {
         //randomizar arraylistan. Forloop som går igenom listan och lägger till knapparna i panelen.
@@ -78,18 +90,14 @@ public class Grid extends JFrame implements ActionListener {
             }
 
         }
-
-
         panel1.revalidate();
-
-
     }
 
     public void femtonSpelPanel() {
         panel.setLayout(new BorderLayout());
         panel1.setLayout(new GridLayout(4, 4));
         panel2.setLayout(new FlowLayout());
-        panel2.setPreferredSize(new Dimension(100,50));
+
         this.setTitle("FemtonSpel");
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -118,10 +126,11 @@ public class Grid extends JFrame implements ActionListener {
         button13.addActionListener(this);
         button14.addActionListener(this);
         button15.addActionListener(this);
-        //emptyButton.addActionListener(this);
+
 
         addButtons();
         buttonsPlacement();
+        //cheatButtonsPlacement();
 
         setVisible(true);
         this.setLocationRelativeTo(null);
@@ -129,34 +138,34 @@ public class Grid extends JFrame implements ActionListener {
     }
 
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            JButton clickedButton = (JButton) e.getSource();
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton clickedButton = (JButton) e.getSource();
 
-            if (e.getSource() == newGame){
-                buttonsPlacement();
-                return;
-            }
-
-            int clickedIndex = buttonsLista.indexOf(clickedButton);
-
-            if (isAdjacent(clickedIndex, emptyIndex)) {
-                Collections.swap(buttonsLista, clickedIndex, emptyIndex);
-                emptyIndex = clickedIndex;
-
-                panel1.removeAll();
-                for (JButton button : buttonsLista) {
-                    panel1.add(button);
-                }
-                panel1.revalidate();
-
-                if (isSolved()) {
-                    JOptionPane.showMessageDialog(panel, "Grattis! Du vann!");
-                }
-            }
-
-
+        if (e.getSource() == newGame) {
+            buttonsPlacement();
+            return;
         }
+
+        int clickedIndex = buttonsLista.indexOf(clickedButton);
+
+        if (isAdjacent(clickedIndex, emptyIndex)) {
+            Collections.swap(buttonsLista, clickedIndex, emptyIndex);
+            emptyIndex = clickedIndex;
+
+            panel1.removeAll();
+            for (JButton button : buttonsLista) {
+                panel1.add(button);
+            }
+            panel1.revalidate();
+
+            if (isSolved()) {
+                JOptionPane.showMessageDialog(panel, "Grattis! Du vann!");
+            }
+        }
+
+
+    }
 
     private boolean isAdjacent(int index1, int index2) {
         int row1 = index1 / 4, col1 = index1 % 4;

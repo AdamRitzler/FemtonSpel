@@ -7,7 +7,6 @@
     <list default="true" id="c91abf8d-b066-4620-8fb5-ad253f420dd6" name="Changes" comment="la till button shuffler och så att den skriver ut alla knapparna.&#10;skapade en osynlig knapp som ska vara den tomma platsen. &#10;försöker fixa klart actionListener för varje knapp så den kan flytta till tomma platsen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <list id="b7a9b1e7-cbdc-49ac-bb19-a115e389d2b1" name="Changes by Niklas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +62,8 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "AfterNewGame",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "cheatToSeeFinish",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
