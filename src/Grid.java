@@ -28,6 +28,7 @@ public class Grid extends JFrame implements ActionListener {
     JButton button14 = new JButton("14");
     JButton button15 = new JButton("15");
     JButton emptyButton = new JButton("");
+    JButton cheatButton = new JButton("Cheats");
 
 
     JButton newGame = new JButton("New Game");
@@ -62,17 +63,20 @@ public class Grid extends JFrame implements ActionListener {
     }
 
     public void cheatButtonsPlacement() {
+        buttonsLista.removeAll(buttonsLista);
+        panel1.removeAll();
+        addButtons();
 
         buttonsLista.add(emptyButton);
-        Collections.swap(buttonsLista, 15, 14);
+        Collections.swap(buttonsLista, 14, 15);
+
         for (int i = 0; i < buttonsLista.size(); i++) {
             panel1.add(buttonsLista.get(i));
             if (buttonsLista.get(i) == emptyButton) {
                 emptyIndex = i;
             }
         }
-
-        emptyButton.setVisible(false);
+        panel1.revalidate();
     }
 
     public void buttonsPlacement() {
@@ -87,6 +91,7 @@ public class Grid extends JFrame implements ActionListener {
             panel1.add(button);
             if (button == emptyButton) {
                 emptyIndex = i;
+
             }
 
         }
@@ -108,8 +113,10 @@ public class Grid extends JFrame implements ActionListener {
         panel.add(panel2, BorderLayout.SOUTH);
 
         panel2.add(newGame);
+        panel2.add(cheatButton);
 
         newGame.addActionListener(this);
+        cheatButton.addActionListener(this);
 
         button1.addActionListener(this);
         button2.addActionListener(this);
@@ -130,7 +137,7 @@ public class Grid extends JFrame implements ActionListener {
 
         addButtons();
         buttonsPlacement();
-        //cheatButtonsPlacement();
+
 
         setVisible(true);
         this.setLocationRelativeTo(null);
@@ -144,6 +151,10 @@ public class Grid extends JFrame implements ActionListener {
 
         if (e.getSource() == newGame) {
             buttonsPlacement();
+            return;
+        }
+        if (e.getSource() == cheatButton) {
+            cheatButtonsPlacement();
             return;
         }
 

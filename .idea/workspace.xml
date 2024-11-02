@@ -22,7 +22,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="newButtonsfix" />
+    <option name="BRANCH" value="cheatToSeeFinish" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -63,7 +63,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "cheatToSeeFinish",
+    "git-widget-placeholder": "CheatButton",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -181,6 +181,32 @@
     <MESSAGE value="testat att fixa buttons." />
     <MESSAGE value="la till button shuffler och så att den skriver ut alla knapparna.&#10;skapade en osynlig knapp som ska vara den tomma platsen. &#10;försöker fixa klart actionListener för varje knapp så den kan flytta till tomma platsen" />
     <MESSAGE value="fixa newgame button restart" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixa newgame button restart" />
+    <MESSAGE value="fixade cheat så man kan se slutet och rensade lite kod" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixade cheat så man kan se slutet och rensade lite kod" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Grid.java</url>
+          <line>64</line>
+          <properties class="Grid" method="cheatButtonsPlacement">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Grid.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Grid.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
