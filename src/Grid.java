@@ -104,7 +104,7 @@ public class Grid extends JFrame implements ActionListener {
 
         panel2.add(newGame);
 
-
+        newGame.addActionListener(this);
 
         addButtons();
         buttonsPlacement();
@@ -119,6 +119,10 @@ public class Grid extends JFrame implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             JButton clickedButton = (JButton) e.getSource();
             int clickedIndex = buttonsLista.indexOf(clickedButton);
+
+            if (e.getSource() == newGame){
+                buttonsPlacement();
+            }
 
             if (isAdjacent(clickedIndex, emptyIndex)) {
                 Collections.swap(buttonsLista, clickedIndex, emptyIndex);
