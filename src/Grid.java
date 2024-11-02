@@ -34,10 +34,6 @@ public class Grid extends JFrame implements ActionListener {
 
     int emptyIndex;
 
-    public Grid() {
-        femtonSpelPanel();
-    }
-
 
    public void addButtons() {
         buttonsLista.add(button1);
@@ -55,6 +51,7 @@ public class Grid extends JFrame implements ActionListener {
         buttonsLista.add(button13);
         buttonsLista.add(button14);
         buttonsLista.add(button15);
+
         emptyButton.setVisible(false);
 
        emptyIndex = 15;
@@ -65,14 +62,14 @@ public class Grid extends JFrame implements ActionListener {
         //randomizar arraylistan. Forloop som går igenom listan och lägger till knapparna i panelen.
         Collections.shuffle(buttonsLista);
         panel1.removeAll();
-
+        buttonsLista.add(emptyButton);
 
         for (int i = 0; i < buttonsLista.size(); i++) {
             panel1.add(buttonsLista.get(i));
             if (buttonsLista.get(i) == emptyButton) {
                 emptyIndex = i;
             }
-            panel1.add(emptyButton);
+
         }
 
 
@@ -82,6 +79,8 @@ public class Grid extends JFrame implements ActionListener {
                 break;
             }
         }
+
+
 
         panel1.revalidate();
 
@@ -105,6 +104,22 @@ public class Grid extends JFrame implements ActionListener {
         panel2.add(newGame);
 
         newGame.addActionListener(this);
+
+        button1.addActionListener(this);
+        button2.addActionListener(this);
+        button3.addActionListener(this);
+        button4.addActionListener(this);
+        button5.addActionListener(this);
+        button6.addActionListener(this);
+        button7.addActionListener(this);
+        button8.addActionListener(this);
+        button9.addActionListener(this);
+        button10.addActionListener(this);
+        button11.addActionListener(this);
+        button12.addActionListener(this);
+        button13.addActionListener(this);
+        button14.addActionListener(this);
+        button15.addActionListener(this);
 
         addButtons();
         buttonsPlacement();
@@ -141,7 +156,7 @@ public class Grid extends JFrame implements ActionListener {
             }
 
 
-    }
+        }
 
     private boolean isAdjacent(int index1, int index2) {
         int row1 = index1 / 4, col1 = index1 % 4;
@@ -157,7 +172,4 @@ public class Grid extends JFrame implements ActionListener {
         return true;
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(Grid::new);
-    }
 }
