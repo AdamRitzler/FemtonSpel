@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c91abf8d-b066-4620-8fb5-ad253f420dd6" name="Changes" comment="la till button shuffler och så att den skriver ut alla knapparna.">
+    <list default="true" id="c91abf8d-b066-4620-8fb5-ad253f420dd6" name="Changes" comment="la till button shuffler och så att den skriver ut alla knapparna.&#10;skapade en osynlig knapp som ska vara den tomma platsen. &#10;försöker fixa klart actionListener för varje knapp så den kan flytta till tomma platsen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
     </list>
+    <list id="b7a9b1e7-cbdc-49ac-bb19-a115e389d2b1" name="Changes by Niklas" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,12 +22,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="ButtonPlacement" />
+    <option name="BRANCH" value="ActionButton" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="action-button-branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +44,9 @@
     &quot;accountId&quot;: &quot;86597973-d4e1-481d-9f36-24f2ba26f8f0&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -54,21 +58,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ActionButton",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ActionButton&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -118,6 +122,11 @@
       <workItem from="1730386572868" duration="293000" />
       <workItem from="1730386893000" duration="720000" />
       <workItem from="1730489803576" duration="5449000" />
+      <workItem from="1730552270517" duration="3659000" />
+      <workItem from="1730556245733" duration="112000" />
+      <workItem from="1730556534174" duration="379000" />
+      <workItem from="1730557055980" duration="979000" />
+      <workItem from="1730558191971" duration="631000" />
     </task>
     <task id="LOCAL−00001" summary="first">
       <option name="closed" value="true" />
@@ -146,10 +155,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
     <MESSAGE value="liten start" />
     <MESSAGE value="testat att fixa buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="testat att fixa buttons." />
+    <MESSAGE value="la till button shuffler och så att den skriver ut alla knapparna.&#10;skapade en osynlig knapp som ska vara den tomma platsen. &#10;försöker fixa klart actionListener för varje knapp så den kan flytta till tomma platsen" />
+    <option name="LAST_COMMIT_MESSAGE" value="la till button shuffler och så att den skriver ut alla knapparna.&#10;skapade en osynlig knapp som ska vara den tomma platsen. &#10;försöker fixa klart actionListener för varje knapp så den kan flytta till tomma platsen" />
   </component>
 </project>
