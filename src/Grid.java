@@ -34,6 +34,10 @@ public class Grid extends JFrame implements ActionListener {
 
     int emptyIndex;
 
+    public Grid() {
+        femtonSpelPanel();
+    }
+
 
    public void addButtons() {
         buttonsLista.add(button1);
@@ -51,6 +55,7 @@ public class Grid extends JFrame implements ActionListener {
         buttonsLista.add(button13);
         buttonsLista.add(button14);
         buttonsLista.add(button15);
+        //buttonsLista.add(emptyButton);
 
         emptyButton.setVisible(false);
 
@@ -60,26 +65,19 @@ public class Grid extends JFrame implements ActionListener {
 
     public void buttonsPlacement() {
         //randomizar arraylistan. Forloop som går igenom listan och lägger till knapparna i panelen.
+        buttonsLista.remove(emptyButton);
         Collections.shuffle(buttonsLista);
         panel1.removeAll();
         buttonsLista.add(emptyButton);
 
         for (int i = 0; i < buttonsLista.size(); i++) {
-            panel1.add(buttonsLista.get(i));
-            if (buttonsLista.get(i) == emptyButton) {
+            JButton button = buttonsLista.get(i);
+            panel1.add(button);
+            if (button == emptyButton) {
                 emptyIndex = i;
             }
 
         }
-
-
-        for (int i = 0; i < buttonsLista.size(); i++) {
-            if (buttonsLista.get(i).getText().isEmpty()) {
-                emptyIndex = i;
-                break;
-            }
-        }
-
 
 
         panel1.revalidate();
@@ -120,6 +118,7 @@ public class Grid extends JFrame implements ActionListener {
         button13.addActionListener(this);
         button14.addActionListener(this);
         button15.addActionListener(this);
+        //emptyButton.addActionListener(this);
 
         addButtons();
         buttonsPlacement();
@@ -133,11 +132,13 @@ public class Grid extends JFrame implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             JButton clickedButton = (JButton) e.getSource();
-            int clickedIndex = buttonsLista.indexOf(clickedButton);
 
             if (e.getSource() == newGame){
                 buttonsPlacement();
+                return;
             }
+
+            int clickedIndex = buttonsLista.indexOf(clickedButton);
 
             if (isAdjacent(clickedIndex, emptyIndex)) {
                 Collections.swap(buttonsLista, clickedIndex, emptyIndex);
@@ -148,10 +149,9 @@ public class Grid extends JFrame implements ActionListener {
                     panel1.add(button);
                 }
                 panel1.revalidate();
-                panel1.repaint();
 
                 if (isSolved()) {
-                    JOptionPane.showMessageDialog(panel, "Grattis! Du Vann!");
+                    JOptionPane.showMessageDialog(panel, "Grattis! Du vann!");
                 }
             }
 
